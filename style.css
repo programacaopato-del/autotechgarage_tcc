@@ -1,0 +1,394 @@
+/* style.css: Arquivo de estilos para o site AutoTechGarage. Define layout, cores e tipografia para um design sofisticado e elegante. */
+
+/* Reset básico para consistência entre navegadores - remove margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do body - define cor de fundo, texto e fonte principal */
+body {
+    background-color: #000000; /* Cor original: preto */
+    color: #fff; /* Cor de texto principal: branco */
+    font-family: 'Roboto', sans-serif; /* Fonte para textos gerais */
+    line-height: 1.6;
+}
+
+/* Container centralizado para conteúdo - limita largura máxima e centraliza o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho - define gradiente de fundo, alinhamento e animação de entrada */
+.cabecalho {
+    background: linear-gradient(to bottom, #000000, #320000); /* Gradiente original */
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para o logo - define tamanho e transição para hover */
+.image1 {
+    height: 250px;
+    width: 250px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.image1:hover {
+    transform: scale(1.35) rotate(5deg);
+    opacity: 0.9;
+}
+
+/* Navegação - define fundo sutil, bordas e sombra */
+nav {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Lista de navegação - exibe itens em linha com espaçamento */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+/* Links de navegação - define cor, padding e transições para hover */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: background 0.4s ease-in-out, transform 0.4s ease-in-out, color 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgb(255, 145, 0);
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+    transform-origin: right;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 145, 0);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Seção Hero - usa foto de mecânico como fundo com overlay para texto legível */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('') no-repeat center center/cover; /* Usando foto de mecânico como fundo */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Conteúdo da hero - limita largura e adiciona padding -->*/
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Botão de chamada para ação - estilizado com cor vermelha e transição -->*/
+.cta-button {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: rgb(200, 0, 0);
+    transform: scale(1.1);
+}
+
+/* Seções gerais - define padding e fundo preto -->*/
+.apresentacao, .localizacao, .introducao-servicos, .conclusao-servicos, .suporte, .sobre-nos, .agendamento {
+    padding: 60px 0;
+    background-color: #000000;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+/* Títulos h2 - centralizados com fonte elegante -->*/
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    font-family: 'Lora', serif;
+    margin-bottom: 40px;
+}
+
+/* Títulos h3 - com fonte elegante -->*/
+h3 {
+    color: #fff;
+    font-family: 'Lora', serif;
+}
+
+/* Títulos h4 - itálicos e centralizados -->*/
+h4 {
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Parágrafos - define tamanho e margem -->*/
+p {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Linha horizontal - estilizada como divisor -->*/
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+/* Galeria de serviços e equipe - exibe cards em flex com espaçamento -->*/
+.galeria, .galeria-equipe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Cards para serviços e equipe - define largura, borda e transições -->*/
+.card, .card-equipe {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #fccc;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #320000;
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+    animation: slideIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Imagens nos cards - define tamanho, borda e transição para hover -->*/
+.card img, .card-equipe img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.card:hover img, .card-equipe:hover img {
+    transform: scale(1.15);
+}
+
+/* Títulos nos cards - define tamanho e fonte -->*/
+.card h3, .card-equipe h4 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #ffffff;
+    font-family: 'Lora', serif;
+}
+
+/* Hover nos cards - eleva e adiciona sombra -->*/
+.card:hover, .card-equipe:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Formulários - define largura máxima, fundo e sombra -->*/
+.form-contato, .form-agendamento {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #320000;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Labels - exibe como bloco com peso negrito -->*/
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Inputs, textarea e select - define largura, padding e transições -->*/
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    transition: border-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: rgb(255, 0, 0);
+    transform: scale(1.02);
+}
+
+/* Botão - estilizado com cor vermelha e transição -->*/
+button {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.4s ease-in-out, transform 0.4s ease-in-out;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgb(200, 0, 0);
+    transform: scale(1.05);
+}
+
+/* Rodapé - define fundo, alinhamento e animação -->*/
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Animações chave - define fadeIn, fadeInUp e slideIn -->*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Classe para animação de scroll - transições para visibilidade -->*/
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade para telas menores - ajusta layouts para tablets e mobiles */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .image1 {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .galeria, .galeria-equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .card-equipe {
+        width: 90%;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .image1 {
+        height: 150px;
+        width: 150px;
+    }
+}
