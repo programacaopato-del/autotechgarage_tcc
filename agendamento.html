@@ -1,0 +1,87 @@
+<!-- agendamento.html: Página de agendamento de serviços. Inclui um formulário para marcar horários. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags para charset, viewport e compatibilidade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Título da página -->
+    <title>AutoTechGarage - Agendamento</title>
+    <!-- Ícone de atalho (favicon) -->
+    <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
+    <!-- Importação de fontes do Google Fonts para um design sofisticado -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+</head>
+<body>
+  <!-- Cabeçalho da página com logo e navegação -->
+  <header class="cabecalho">
+    <!-- Logo da empresa com efeito de hover -->
+    <img src="20251110_1358_Logo_AutoTech_3D_simple_compose_01k9qb611mec7bvtf0z5z25bsx-removebg-preview.png" alt="Logo AutoTechGarage" class="image1">
+    <!-- Navegação principal com links para outras páginas -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Nossos Serviços</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de agendamento com formulário para o usuário agendar serviços -->
+  <section class="agendamento">
+    <div class="container">
+      <h2>Agende Seu Serviço</h2>
+      <p>Preencha o formulário abaixo para agendar uma visita à nossa oficina. Entraremos em contato para confirmar.</p>
+      
+      <!-- Formulário de agendamento com campos para dados do usuário e seleção de serviço -->
+      <form class="form-agendamento" id="formAgendamento">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+        
+        <label for="servico">Serviço Desejado:</label>
+        <select id="servico" name="servico" required>
+          <option value="">Selecione...</option>
+          <option value="troca-oleo">Troca de Óleo</option>
+          <option value="troca-filtro">Troca de Filtro</option>
+          <option value="filtro-ar-condicionado">Troca de Filtro de Ar-Condicionado</option>
+          <option value="injecao-eletronica">Injeção Eletrônica</option>
+          <option value="manutencao-preventiva">Manutenção Preventiva</option>
+          <option value="escapamento">Escapamento</option>
+          <option value="sistema-freios">Sistema de Freios</option>
+        </select>
+        
+        <label for="data">Data Preferida:</label>
+        <input type="date" id="data" name="data" required>
+        
+        <label for="mensagem">Mensagem Adicional:</label>
+        <textarea id="mensagem" name="mensagem"></textarea>
+        
+        <button type="submit">Agendar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé da página com informações de direitos reservados -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AutoTechGarage. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Link para script JavaScript para adicionar interatividade -->
+  <script src="script.js"></script>
+</body>
+</html>
