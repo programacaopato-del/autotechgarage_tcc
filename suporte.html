@@ -1,0 +1,80 @@
+<!-- suporte.html: Página de suporte e contato da AutoTechGarage. Inclui formulário de contato e informações de suporte. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags para charset, viewport e compatibilidade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Título da página -->
+    <title>AutoTechGarage - Suporte</title>
+    <!-- Ícone de atalho (favicon) -->
+    <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
+    <!-- Importação de fontes do Google Fonts para um design sofisticado -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+</head>
+<body>
+  <!-- Cabeçalho da página com logo e navegação -->
+  <header class="cabecalho">
+    <!-- Logo da empresa com efeito de hover -->
+    <img src="20251110_1358_Logo_AutoTech_3D_simple_compose_01k9qb611mec7bvtf0z5z25bsx-removebg-preview.png" alt="Logo AutoTechGarage" class="image1">
+    <!-- Navegação principal com links para outras páginas -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Nossos Serviços</a></li>
+            <li><a href="agendamento.html">Agendamento</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de suporte com informações de contato e formulário para envio de mensagens -->
+  <section class="suporte">
+    <div class="container">
+      <h2>Suporte e Contato</h2>
+      <p>Estamos aqui para ajudar! Entre em contato conosco para dúvidas, orçamentos ou suporte técnico. Nossa equipe responderá o mais breve possível.</p>
+      
+      <!-- Informações de contato listadas -->
+      <div class="info-contato">
+        <h3>Informações de Contato</h3>
+        <ul>
+          <li><strong>Telefone:</strong> (11) 1234-5678</li>
+          <li><strong>Email:</strong> suporte@autotechgarage.com</li>
+          <li><strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo, SP</li>
+          <li><strong>Horário de Atendimento:</strong> Segunda a Sexta, 8h às 18h</li>
+        </ul>
+      </div>
+
+      <!-- Formulário de contato para o usuário enviar mensagens -->
+      <form class="form-contato" id="formContato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé da página com informações de direitos reservados -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AutoTechGarage. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Link para script JavaScript para adicionar interatividade -->
+  <script src="script.js"></script>
+</body>
+</html>
