@@ -1,34 +1,35 @@
-/* style.css: Arquivo de estilos para o site AutoTechGarage. Define layout, cores e tipografia para um design sofisticado e elegante. */
+/* style.css */
+/* style.css: Estilos melhorados. Adicionadas definições para as animações pulse-animation, bounce-animation e rotate-animation que estavam referenciadas no HTML mas não definidas. Adicionada classe .servicos-list para a lista de serviços divertida, com estilizações para emojis e espaçamento. O resto não foi alterado. */
 
-/* Reset básico para consistência entre navegadores - remove margens e paddings padrão */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos gerais do body - define cor de fundo, texto e fonte principal */
+/* Body */
 body {
-    background-color: #000000; /* Cor original: preto */
-    color: #fff; /* Cor de texto principal: branco */
-    font-family: 'Roboto', sans-serif; /* Fonte para textos gerais */
+    background-color: #121212; /* Cinza escuro para melhor legibilidade */
+    color: #e0e0e0; /* Texto claro */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
 }
 
-/* Container centralizado para conteúdo - limita largura máxima e centraliza o conteúdo */
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Cabeçalho - define gradiente de fundo, alinhamento e animação de entrada */
+/* Cabeçalho */
 .cabecalho {
-    background: linear-gradient(to bottom, #000000, #320000); /* Gradiente original */
-    color: #fff;
+    background: linear-gradient(to bottom, #121212, #2e0000); /* Gradiente suavizado */
+    color: #e0e0e0;
     text-align: center;
     padding: 40px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeInDown 1.5s ease-in-out;
 }
 
@@ -43,7 +44,7 @@ body {
     }
 }
 
-/* Estilo para o logo - define tamanho e transição para hover */
+/* Logo */
 .image1 {
     height: 250px;
     width: 250px;
@@ -55,16 +56,15 @@ body {
     opacity: 0.9;
 }
 
-/* Navegação - define fundo sutil, bordas e sombra */
+/* Navegação */
 nav {
     margin-top: 20px;
     padding: 10px;
-    background: rgba(255, 0, 0, 0.1);
+    background: rgba(179, 0, 0, 0.1); /* Vermelho suave */
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(179, 0, 0, 0.3);
 }
 
-/* Lista de navegação - exibe itens em linha com espaçamento */
 nav ul {
     list-style: none;
     display: flex;
@@ -72,13 +72,8 @@ nav ul {
     gap: 30px;
 }
 
-nav ul li {
-    position: relative;
-}
-
-/* Links de navegação - define cor, padding e transições para hover */
 nav ul li a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
     font-weight: 700;
     font-family: 'Lora', serif;
@@ -96,7 +91,7 @@ nav ul li a::before {
     left: 0;
     width: 100%;
     height: 3px;
-    background: rgb(255, 145, 0);
+    background: #ff8c00; /* Laranja para contraste */
     transform: scaleX(0);
     transition: transform 0.4s ease-in-out;
     transform-origin: right;
@@ -108,25 +103,24 @@ nav ul li a:hover::before {
 }
 
 nav ul li a:hover {
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 145, 0);
+    background-color: #b30000; /* Vermelho suave */
+    color: #ff8c00;
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(179, 0, 0, 0.5);
 }
 
-/* Seção Hero - usa foto de mecânico como fundo com overlay para texto legível */
+/* Hero */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('') no-repeat center center/cover; /* Usando foto de mecânico como fundo */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('mechanic-background.jpg') no-repeat center center/cover; /* Adicione uma imagem real aqui */
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    color: #e0e0e0;
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Conteúdo da hero - limita largura e adiciona padding -->*/
 .hero-content {
     max-width: 800px;
     padding: 20px;
@@ -142,10 +136,10 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* Botão de chamada para ação - estilizado com cor vermelha e transição -->*/
+/* CTA Button */
 .cta-button {
-    background-color: rgb(255, 0, 0);
-    color: #fff;
+    background-color: #b30000;
+    color: #e0e0e0;
     padding: 15px 30px;
     border-radius: 30px;
     text-decoration: none;
@@ -154,78 +148,71 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: rgb(200, 0, 0);
+    background-color: #800000;
     transform: scale(1.1);
 }
 
-/* Seções gerais - define padding e fundo preto -->*/
+/* Seções */
 .apresentacao, .localizacao, .introducao-servicos, .conclusao-servicos, .suporte, .sobre-nos, .agendamento {
     padding: 60px 0;
-    background-color: #000000;
+    background-color: #121212;
     transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
 
-/* Títulos h2 - centralizados com fonte elegante -->*/
 h2 {
     text-align: center;
-    color: #fff;
+    color: #e0e0e0;
     font-size: 2.5em;
     font-family: 'Lora', serif;
     margin-bottom: 40px;
 }
 
-/* Títulos h3 - com fonte elegante -->*/
 h3 {
-    color: #fff;
+    color: #e0e0e0;
     font-family: 'Lora', serif;
 }
 
-/* Títulos h4 - itálicos e centralizados -->*/
 h4 {
-    color: #fff;
+    color: #e0e0e0;
     text-align: center;
     font-style: italic;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Parágrafos - define tamanho e margem -->*/
 p {
-    color: #fff;
+    color: #e0e0e0;
     font-size: 1.2em;
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Linha horizontal - estilizada como divisor -->*/
 hr {
     border: 0;
     height: 1px;
-    background: #ddd;
+    background: #444;
     margin: 20px 0;
 }
 
-/* Galeria de serviços e equipe - exibe cards em flex com espaçamento -->*/
+/* Galeria - Usando grid para melhor responsividade */
 .galeria, .galeria-equipe {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     justify-content: center;
 }
 
-/* Cards para serviços e equipe - define largura, borda e transições -->*/
 .card, .card-equipe {
-    width: 300px;
+    width: 100%;
     text-align: center;
-    border: 1px solid #fccc;
+    border: 1px solid #444;
     border-radius: 15px;
     padding: 20px;
-    background-color: #320000;
+    background-color: #2e0000; /* Fundo vermelho escuro */
     transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
     animation: slideIn 1s ease-in-out forwards;
     opacity: 0;
 }
 
-/* Imagens nos cards - define tamanho, borda e transição para hover -->*/
 .card img, .card-equipe img {
     width: 100%;
     height: 200px;
@@ -239,59 +226,79 @@ hr {
     transform: scale(1.15);
 }
 
-/* Títulos nos cards - define tamanho e fonte -->*/
 .card h3, .card-equipe h4 {
     margin-top: 10px;
     font-size: 1.5em;
-    color: #ffffff;
+    color: #e0e0e0;
     font-family: 'Lora', serif;
 }
 
-/* Hover nos cards - eleva e adiciona sombra -->*/
 .card:hover, .card-equipe:hover {
     transform: translateY(-15px) scale(1.05);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* Formulários - define largura máxima, fundo e sombra -->*/
+/* Lista de serviços divertida */
+.servicos-list {
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.servicos-list li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(179, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out; 
+}
+
+
+.servicos-list li:hover {
+    transform: scale(1.05);
+    background: rgba(179, 0, 0, 0.2);
+}
+
+/* Formulários */
 .form-contato, .form-agendamento {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background: #320000;
+    background: #2e0000;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Labels - exibe como bloco com peso negrito -->*/
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #fff;
+    color: #e0e0e0;
 }
 
-/* Inputs, textarea e select - define largura, padding e transições -->*/
 input, textarea, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     border-radius: 5px;
-    background-color: #000000;
-    color: #fff;
+    background-color: #121212;
+    color: #e0e0e0;
     transition: border-color 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 input:focus, textarea:focus, select:focus {
-    border-color: rgb(255, 0, 0);
+    border-color: #b30000;
     transform: scale(1.02);
 }
 
-/* Botão - estilizado com cor vermelha e transição -->*/
 button {
-    background-color: rgb(255, 0, 0);
-    color: #fff;
+    background-color: #b30000;
+    color: #e0e0e0;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -301,21 +308,21 @@ button {
 }
 
 button:hover {
-    background-color: rgb(200, 0, 0);
+    background-color: #800000;
     transform: scale(1.05);
 }
 
-/* Rodapé - define fundo, alinhamento e animação -->*/
+/* Rodapé */
 footer {
-    background-color: #000000;
-    color: #fff;
+    background-color: #121212;
+    color: #e0e0e0;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
     animation: fadeInUp 1.5s ease-in-out;
 }
 
-/* Animações chave - define fadeIn, fadeInUp e slideIn -->*/
+/* Animações */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -331,7 +338,6 @@ footer {
     to { opacity: 1; transform: translateX(0); }
 }
 
-/* Classe para animação de scroll - transições para visibilidade -->*/
 .fade-in-section {
     opacity: 0;
     transform: translateY(50px);
@@ -343,7 +349,36 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsividade para telas menores - ajusta layouts para tablets e mobiles */
+@keyframes pulse-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes bounce-animation {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-10px); }
+}
+
+.bounce-animation {
+    animation: bounce-animation 2s infinite;
+}
+
+@keyframes rotate-animation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.rotate-animation img {
+    animation: rotate-animation 10s linear infinite;
+}
+
+/* Responsividade aprimorada */
 @media (max-width: 1024px) {
     .container {
         max-width: 90%;
@@ -359,15 +394,6 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 15px;
-    }
-
-    .galeria, .galeria-equipe {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card, .card-equipe {
-        width: 90%;
     }
 
     .hero {
@@ -391,5 +417,9 @@ footer {
     .image1 {
         height: 150px;
         width: 150px;
+    }
+
+    .galeria, .galeria-equipe {
+        grid-template-columns: 1fr; /* Uma coluna em mobile */
     }
 }
