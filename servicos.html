@@ -1,9 +1,9 @@
-<!-- servicos.html: Página de serviços oferecidos pela AutoTechGarage. Apresenta cards com descrições e imagens de cada serviço usando fotos de mecânicos. -->
+<!-- servicos.html: Página de serviços oferecidos pela AutoTechGarage. Simplificada para uma lista limpa e agradável de ler, sem emojis ou imagens, focando em clareza e simplicidade. Adicionados comentários explicando cada parte do código. -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Meta tags para charset, viewport e compatibilidade -->
+    <!-- Meta tags básicas para configuração da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link para o arquivo de estilos CSS -->
@@ -12,7 +12,7 @@
     <title>AutoTechGarage - Nossos Serviços</title>
     <!-- Ícone de atalho (favicon) -->
     <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
-    <!-- Importação de fontes do Google Fonts para um design sofisticado -->
+    <!-- Importação de fontes do Google Fonts para consistência visual -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
@@ -21,8 +21,8 @@
 <body>
   <!-- Cabeçalho da página com logo e navegação -->
   <header class="cabecalho">
-    <!-- Logo da empresa com efeito de hover -->
-    <img src="20251110_1358_Logo_AutoTech_3D_simple_compose_01k9qb611mec7bvtf0z5z25bsx-removebg-preview.png" alt="Logo AutoTechGarage" class="image1">
+    <!-- Logo da empresa com animação pulse para destaque -->
+    <img src="20251110_1358_Logo_AutoTech_3D_simple_compose_01k9qb611mec7bvtf0z5z25bsx-removebg-preview.png" alt="Logo AutoTechGarage" class="image1 pulse-animation">
     <!-- Navegação principal com links para outras páginas -->
     <nav>
         <ul>
@@ -34,8 +34,8 @@
     </nav>
   </header>
 
-  <!-- Introdução à página de serviços com histórico da empresa -->
-  <section class="introducao-servicos">
+  <!-- Introdução aos serviços, com texto descritivo sobre a empresa -->
+  <section class="introducao-servicos fade-in-section">
     <div class="container">
       <h2>Desde 2007</h2>
       <hr>
@@ -43,75 +43,44 @@
     </div>
   </section>
 
-  <!-- Galeria de serviços com cards usando fotos de mecânicos para ilustrar cada serviço -->
+  <!-- Seção principal com lista simples de serviços, projetada para ser fácil de ler -->
   <section class="galeria-servicos">
     <div class="container galeria">
-      <!-- Card para Troca de Óleo com foto do mecânico -->
-      <div class="card">
-        <img src="gugu.webp" alt="Mecânico realizando troca de óleo">
-        <h3>Troca de Óleo</h3>
-        <p>Realizamos a troca de óleo utilizando produtos homologados pelas montadoras, garantindo lubrificação adequada, redução de desgaste e maior vida útil ao motor. Inclui substituição do filtro e verificação dos principais fluídos.</p>
-      </div>
-
-      <!-- Card para Troca de Filtro com foto do mecânico -->
-      <div class="card">
-        <img src="mc titi.webp" alt="Mecânico trocando filtro">
-        <h3>Troca de Filtro</h3>
-        <p>O filtro de ar é responsável por impedir que poeira, partículas e impurezas entrem no motor durante a admissão de ar. Quando está limpo e em boas condições, ele garante uma queima de combustível mais eficiente, melhora o desempenho do veículo e reduz o consumo.</p>
-      </div>
-
-      <!-- Card para Troca de Filtro de Ar-Condicionado com foto do mecânico -->
-      <div class="card">
-        <img src="olavinho.webp" alt="Mecânico trocando filtro de ar-condicionado">
-        <h3>Troca de Filtro de Ar-Condicionado</h3>
-        <p>O filtro de ar-condicionado, também conhecido como filtro de cabine, é responsável por purificar o ar que entra no interior do veículo através do sistema de ventilação. Ele retém poeira, fuligem, pólen, fungos e outras partículas que podem afetar a saúde e o conforto dos ocupantes.</p>
-      </div>
-
-      <!-- Card para Injeção Eletrônica com foto do mecânico -->
-      <div class="card">
-        <img src="lalau.jpg" alt="Mecânico diagnosticando injeção eletrônica">
-        <h3>Injeção Eletrônica</h3>
-        <p>Com equipamentos de última geração, realizamos diagnóstico detalhado da injeção eletrônica, corrigindo falhas de desempenho, consumo elevado e perda de potência. Serviço rápido, preciso e confiável.</p>
-      </div>
-
-      <!-- Card para Manutenção Preventiva com foto do mecânico -->
-      <div class="card">
-        <img src="tavuo.jpg" alt="Mecânico realizando manutenção preventiva">
-        <h3>Manutenção Preventiva</h3>
-        <p>A manutenção preventiva é essencial para garantir o bom funcionamento, a segurança e a durabilidade do veículo. Esse serviço consiste em inspeções periódicas e substituições programadas de componentes antes que apresentem falhas, evitando problemas inesperados e reparos mais caros no futuro.</p>
-      </div>
-
-      <!-- Card para Escapamento com foto do mecânico -->
-      <div class="card">
-        <img src="Imagens/Gabriel.jfif" alt="Mecânico inspecionando escapamento">
-        <h3>Escapamento</h3>
-        <p>Inspecionamos todo o sistema de escapamento, identificando corrosões, vazamentos e ruídos anormais. Realizamos reparos ou substituições com peças de alta resistência.</p>
-      </div>
-
-      <!-- Card para Sistema de Freios com foto do mecânico -->
-      <div class="card">
-        <img src="Imagens/Jefferson.jfif" alt="Mecânico mantendo sistema de freios">
-        <h3>Sistema de Freios</h3>
-        <p>Executamos manutenção completa do sistema de freios, incluindo troca de pastilhas, discos e fluído. Utilizamos equipamentos de precisão para garantir frenagens mais seguras, estáveis e eficientes.</p>
-      </div>
+      <!-- Lista não ordenada de serviços, com itens claros e concisos -->
+      <ul class="servicos-list">
+        <!-- Item para Troca de Óleo -->
+        <li><strong>Troca de Óleo:</strong> Realizamos a troca de óleo utilizando produtos homologados pelas montadoras, garantindo lubrificação adequada, redução de desgaste e maior vida útil ao motor. Inclui substituição do filtro e verificação dos principais fluídos.</li>
+        <!-- Item para Troca de Filtro -->
+        <li><strong>Troca de Filtro:</strong> O filtro de ar é responsável por impedir que poeira, partículas e impurezas entrem no motor durante a admissão de ar. Quando está limpo e em boas condições, ele garante uma queima de combustível mais eficiente, melhora o desempenho do veículo e reduz o consumo.</li>
+        <!-- Item para Troca de Filtro de Ar-Condicionado -->
+        <li><strong>Troca de Filtro de Ar-Condicionado:</strong> O filtro de ar-condicionado, também conhecido como filtro de cabine, é responsável por purificar o ar que entra no interior do veículo através do sistema de ventilação. Ele retém poeira, fuligem, pólen, fungos e outras partículas que podem afetar a saúde e o conforto dos ocupantes.</li>
+        <!-- Item para Injeção Eletrônica -->
+        <li><strong>Injeção Eletrônica:</strong> Com equipamentos de última geração, realizamos diagnóstico detalhado da injeção eletrônica, corrigindo falhas de desempenho, consumo elevado e perda de potência. Serviço rápido, preciso e confiável.</li>
+        <!-- Item para Manutenção Preventiva -->
+        <li><strong>Manutenção Preventiva:</strong> A manutenção preventiva é essencial para garantir o bom funcionamento, a segurança e a durabilidade do veículo. Esse serviço consiste em inspeções periódicas e substituições programadas de componentes antes que apresentem falhas, evitando problemas inesperados e reparos mais caros no futuro.</li>
+        <!-- Item para Escapamento -->
+        <li><strong>Escapamento:</strong> Inspecionamos todo o sistema de escapamento, identificando corrosões, vazamentos e ruídos anormais. Realizamos reparos ou substituições com peças de alta resistência.</li>
+        <!-- Item para Sistema de Freios -->
+        <li><strong>Sistema de Freios:</strong> Executamos manutenção completa do sistema de freios, incluindo troca de pastilhas, discos e fluído. Utilizamos equipamentos de precisão para garantir frenagens mais seguras, estáveis e eficientes.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Conclusão da página de serviços com resumo da experiência da empresa -->
-  <section class="conclusao-servicos">
+  <!-- Conclusão dos serviços, com texto resumindo a experiência da empresa -->
+  <section class="conclusao-servicos fade-in-section">
     <div class="container">
       <h4>Com mais de uma década de experiência, a AutoTechGarage presta serviços completos de manutenção e diagnóstico, priorizando segurança, eficiência e atendimento personalizado. Conte com nossa equipe para conservar o valor e o desempenho do seu veículo.</h4>
     </div>
   </section>
 
-  <!-- Rodapé da página com informações de direitos reservados -->
+  <!-- Rodapé da página com direitos reservados -->
   <footer>
     <div class="container">
       <p>&copy; 2025 AutoTechGarage. Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <!-- Link para script JavaScript para adicionar interatividade -->
+  <!-- Script JavaScript para interatividade -->
   <script src="script.js"></script>
 </body>
 </html>
